@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
 import { FaSignInAlt } from 'react-icons/fa';
+import {  Link} from 'react-router-dom';
+
 
 const benefits = [
     {
@@ -35,9 +37,9 @@ const HomePage = () => {
                     />
                     <div className="absolute inset-0 bg-black opacity-35"></div>
                     <div className="absolute bottom-0 left-0 right-0 mb-8 text-center">
-                        <a href="#donate" className="inline-flex items-center bg-red-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-red-500">
+                        <Link to='/login' className="inline-flex items-center bg-red-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-red-500">
                             <FaSignInAlt className="mr-2" /> Login
-                        </a>
+                        </Link>
                     </div>
                 </div>
                 <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
@@ -49,7 +51,7 @@ const HomePage = () => {
             </section>
 
             {/* About Section */}
-            <section className="py-16 bg-gray-100">
+            <section className="py-16 bg-red-50">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="text-center">
                         <h2 className="text-3xl font-bold text-red-600">Why Donate Blood?</h2>
@@ -80,7 +82,7 @@ const HomePage = () => {
                     <h2 className="text-3xl font-bold">Ready to Make a Difference?</h2>
                     <p className="mt-4 text-lg">Join our community of blood donors today and help us save lives. Click below to find a donation center near you and schedule your appointment.</p>
                     <div className="mt-8">
-                        <a href="/donate" className="inline-block bg-white text-red-600 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-200">
+                        <a href='#' className="inline-block bg-white text-red-600 font-semibold py-2 px-4 rounded-lg shadow-md hover:bg-gray-200">
                             Find Donation Center
                         </a>
                     </div>
