@@ -36,7 +36,7 @@ const Home = () => {
                     />
                     <div className="absolute inset-0 bg-black opacity-35 z-0"></div> {/* Overlay */}
                     <div className="absolute bottom-0 left-0 right-0 mb-8 text-center z-10">
-                        <Link to='/login' className="inline-flex items-center bg-red-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-red-500">
+                        <Link to='/login' className="inline-flex items-center bg-red-600 text-white font-semibold px-4 py-2 rounded-lg shadow-md hover:bg-red-500">
                             <FaSignInAlt className="mr-2" /> Login
                         </Link>
                     </div>

@@ -20,7 +20,7 @@ const Navbar = () => {
                 {/* Center - Navigation Links */}
                 <div className="hidden md:flex space-x-8 flex-1 justify-center">
                     <Link to='/' className="text-xl font-bold hover:text-gray-200">Home</Link>
-                    <a href='#' className="text-xl font-bold hover:text-gray-200">About</a>
+                    <Link to='/about' className="text-xl font-bold hover:text-gray-200">About</Link>
                     <a href='#' className="text-xl font-bold hover:text-gray-200">Details</a>
                 </div>
 
