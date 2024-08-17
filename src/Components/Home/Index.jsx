@@ -1,7 +1,6 @@
 import React, { useMemo } from 'react';
 import { FaSignInAlt } from 'react-icons/fa';
-import {  Link} from 'react-router-dom';
-
+import { Link } from 'react-router-dom';
 
 const benefits = [
     {
@@ -21,31 +20,32 @@ const benefits = [
     },
 ];
 
-const HomePage = () => {
+const Home = () => {
     // Memoize the benefits list to avoid unnecessary recalculations
     const memoizedBenefits = useMemo(() => benefits, []);
 
     return (
         <div>
             {/* Hero Section */}
-            <section className="relative bg-red-600 text-white">
-                <div className="relative h-[382px]">
+            <section className="relative bg-red-600 text-white font-mono">
+                <div className="relative h-[200px] sm:h-[220px] md:h-[240px] lg:h-[260px] xl:h-[300px] 2xl:h-[320px]">
                     <img
                         src="/Navbar/Home.jpg"
                         alt="Blood Donation Hero"
-                        className="object-cover w-full h-full"
+                        className="object-cover w-full h-full min-h-[200px]  object-center"
                     />
-                    <div className="absolute inset-0 bg-black opacity-35"></div>
-                    <div className="absolute bottom-0 left-0 right-0 mb-8 text-center">
+                    <div className="absolute inset-0 bg-black opacity-35 z-0"></div> {/* Overlay */}
+                    <div className="absolute bottom-0 left-0 right-0 mb-8 text-center z-10">
                         <Link to='/login' className="inline-flex items-center bg-red-600 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:bg-red-500">
                             <FaSignInAlt className="mr-2" /> Login
                         </Link>
                     </div>
                 </div>
-                <div className="relative max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
+
+                <div className="relative max-w-7xl mx-auto px-4 py-5 sm:px-6 lg:px-8 z-10"> {/* Adjust z-index */}
                     <div className="text-center animate-fade-in-out">
-                        <h1 className="text-4xl font-extrabold sm:text-5xl md:text-6xl">Save Lives, Donate Blood</h1>
-                        <p className="mt-4 text-lg sm:text-xl">Join us in our mission to make the world a healthier place. Your donation can save lives.</p>
+                        <h1 className="text-3xl sm:text-2xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold">Save Lives, Donate Blood</h1>
+                        <p className="mt-4 text-md sm:text-lg md:text-xl lg:text-2xl xl:text-2xl">Join us in our mission to make the world a healthier place. Your donation can save lives.</p>
                     </div>
                 </div>
             </section>
@@ -92,4 +92,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default Home;

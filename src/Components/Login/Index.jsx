@@ -1,4 +1,6 @@
 import {React ,  useState } from 'react';
+import { Link } from 'react-router-dom';
+
 
 function Login() {
     const [inputValue, setInputValue] = useState('');
@@ -19,14 +21,14 @@ function Login() {
 
     return (
         <>
-            <div className="flex items-center justify-center h-screen bg-red-50 w-full">
+            <div className="flex items-center justify-center h-screen bg-gray-100 w-full">
                 <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full">
                     <img className="w-full h-48 object-cover rounded-t-lg" src="https://wallpapercave.com/wp/wp4323556.jpg" alt="Logo" />
                     <div className="text-center mt-4">
-                        <h2 className="text-2xl font-semibold text-red-600">Login to Your Account</h2>
+                        <h2 className="text-2xl font-semibold text-black">Login to Your Account</h2>
                     </div>
                     <div className="mt-6">
-                        <label className="block text-sm text-red-600">Enter Email</label>
+                        <label className="block text-sm text-black">Enter Email</label>
                         <input
                             type="text"
                             className="border-2 border-gray-300 p-2 rounded w-full mt-1"
@@ -36,7 +38,7 @@ function Login() {
                         />
                     </div>
                     <div className="mt-4">
-                        <label className="block text-sm text-red-600">Enter Password</label>
+                        <label className="block text-sm text-black">Enter Password</label>
                         <input
                             type="password"
                             className="border-2 border-gray-300 p-2 rounded w-full mt-1"
@@ -52,9 +54,9 @@ function Login() {
                         <button className="bg-red-600 hover:bg-red-500 text-white py-2 px-4 rounded" onClick={handleLoginClick}>
                             Login
                         </button>
-                        <a href="/signup" className="text-sm text-red-600 hover:underline">
-                            No account? Signup
-                        </a>
+                        <div className="text-sm text-black ">No account?
+                        <Link to="/signup" className=' ml-1 hover:underline text-blue-700'>Signup</Link>   
+                        </div>
                     </div>
                 </div>
             </div>
