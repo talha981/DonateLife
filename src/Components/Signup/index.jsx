@@ -39,7 +39,7 @@ function Signup() {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100 w-full">
-      <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md mt-11 w-full">
+      <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md mt-20 w-full">
         <img className="w-full h-48 object-cover rounded-t-lg" src="https://wallpapercave.com/wp/wp4323556.jpg" alt="Logo" />
         <div className="text-center mt-4">
           <h2 className="text-2xl font-semibold text-black">Create Your Account</h2>
